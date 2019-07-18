@@ -1,0 +1,99 @@
+
+@font-face {
+  font-family: 'Monospace';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monospace'), local('Monospace-Regular') format('woff');
+}
+
+@font-face {
+  font-family: 'Monospace';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Monospace Medium'), local('Monospace-Medium') format('woff');
+}
+
+:root {
+  --lh-blue-color: #30feee;
+  --lh-bg-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 390px;
+  height: 200px;
+  background-color: var(--lh-bg-color);
+  color: #212121;
+}
+.github {
+  color: #f5f5f5;
+}
+.header {
+  padding: 26px;
+  display: flex;
+  flex: 1;
+}
+
+
+
+.ana-kisim {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-baslik {
+  margin: 0;
+  font-family: 'Monospace', Arial, sans-serif;
+  color: currentColor;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+
+.metin {
+  position: relative;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+
+
+.alt-kisim {
+  height: 70px;
+  display: flex;
+  padding: 16px;
+  background-color: var(--lh-blue-color);
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.button {
+  cursor: pointer;
+  font-family: 'Roboto', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  color: #fff;
+  background-color: #3979ff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  border-radius: 2px;
+  padding: 7px 12px 5px 12px
+}
+
+.button--right {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px 10px 16px;
+  align-self: stretched;
+  margin-left: auto;
+}
