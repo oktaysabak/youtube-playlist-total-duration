@@ -1,6 +1,6 @@
 {
   "name": "Youtube Playlist Total Duration Calculator",
-  "version": "1.6",
+  "version": "2.0",
   "description": "this extension is calculating total time of all videos in youtube playlist which you are watching. enjoy it!",
   "manifest_version": 2,
   "content_scripts": [
@@ -17,7 +17,7 @@
     "scripts": ["background.js"]
 },
 "permissions": [
-  "*://*.youtube.com/*list*", "activeTab", "webNavigation", "tabs"
+  "*://*.youtube.com/*list*", "webNavigation", "tabs"
 ],
 
    "browser_action": {
