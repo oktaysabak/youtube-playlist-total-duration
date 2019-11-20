@@ -62,7 +62,7 @@ function addSpan() {
         node.className = "yt-simple-endpoint style-scope yt-formatted-string";
         node.id = "total_playlist_time";
         if (window.location.href.indexOf("playlist") > -1) {
-            document.getElementById('privacy-form').appendChild(node);
+            document.getElementById('stats').appendChild(node);
         } else {
             document.getElementById('save-button').appendChild(node);
         }
@@ -71,7 +71,7 @@ function addSpan() {
         if (!document.getElementById("total_playlist_time")) {
             console.log('youtube playlist duration calculator loaded.')
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('privacy-form').appendChild(node);
+                document.getElementById('stats').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
             }
@@ -79,7 +79,7 @@ function addSpan() {
         } else {
             document.getElementById("total_playlist_time").remove();
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('privacy-form').appendChild(node);
+                document.getElementById('stats').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
             }
