@@ -2,7 +2,7 @@
 // @name        YouTube playlist total duration
 // @version     1.0.0
 // @description This script is calculating total time of all videos in youtube playlist which you are watching
-// @license     ?
+// @license     MIT License
 // @author      Oktay Sabak
 // @match       https://www.youtube.com/playlist*
 // @namespace   https://github.com/oktaysabak
