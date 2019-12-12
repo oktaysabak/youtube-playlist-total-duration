@@ -54,17 +54,21 @@ function addSpan() {
 
         var videos = getVideos(a);
         var toplam_sure = sureHesapla(videos);
-        var duration = 'Total Time: [ '+timeConvert(toplam_sure)+' ]';
-        var hr = document.createElement('hr');
+        var duration = 'Total Time: [ ' + timeConvert(toplam_sure) + ' ]';
         var node = document.createElement("span");
         var textnode = document.createTextNode(duration);
-        node.style.fontSize = "1.1rem";
+        node.style.fontSize = "1.3rem";
 
         node.appendChild(textnode);
         node.className = "yt-simple-endpoint style-scope";
         node.id = "total_playlist_time";
+
         if (window.location.href.indexOf("playlist") > -1) {
-            document.getElementById('title').appendChild(hr);
+
+            var title = document.getElementById('title');
+            if (title.getAttribute('hidden') == "") {
+                title.removeAttribute('hidden');
+            }
             document.getElementById('title').appendChild(node);
         } else {
             document.getElementById('save-button').appendChild(node);
@@ -74,7 +78,11 @@ function addSpan() {
         if (!document.getElementById("total_playlist_time")) {
             console.log('youtube playlist duration calculator loaded.')
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('title').appendChild(hr);
+                var title = document.getElementById('title');
+                if (title.getAttribute('hidden') == "") {
+                    title.removeAttribute('hidden');
+                }
+
                 document.getElementById('title').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
@@ -83,7 +91,11 @@ function addSpan() {
         } else {
             document.getElementById("total_playlist_time").remove();
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('title').appendChild(hr);
+
+                var title = document.getElementById('title');
+                if (title.getAttribute('hidden') == "") {
+                    title.removeAttribute('hidden');
+                }
                 document.getElementById('title').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
