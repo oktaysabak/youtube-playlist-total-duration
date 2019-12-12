@@ -54,15 +54,18 @@ function addSpan() {
 
         var videos = getVideos(a);
         var toplam_sure = sureHesapla(videos);
-        var duration = timeConvert(toplam_sure);
+        var duration = 'Total Time: [ '+timeConvert(toplam_sure)+' ]';
+        var hr = document.createElement('hr');
         var node = document.createElement("span");
         var textnode = document.createTextNode(duration);
+        node.style.fontSize = "1.1rem";
 
         node.appendChild(textnode);
-        node.className = "yt-simple-endpoint style-scope yt-formatted-string";
+        node.className = "yt-simple-endpoint style-scope";
         node.id = "total_playlist_time";
         if (window.location.href.indexOf("playlist") > -1) {
-            document.getElementById('stats').appendChild(node);
+            document.getElementById('title').appendChild(hr);
+            document.getElementById('title').appendChild(node);
         } else {
             document.getElementById('save-button').appendChild(node);
         }
@@ -71,7 +74,8 @@ function addSpan() {
         if (!document.getElementById("total_playlist_time")) {
             console.log('youtube playlist duration calculator loaded.')
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('stats').appendChild(node);
+                document.getElementById('title').appendChild(hr);
+                document.getElementById('title').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
             }
@@ -79,7 +83,8 @@ function addSpan() {
         } else {
             document.getElementById("total_playlist_time").remove();
             if (window.location.href.indexOf("playlist") > -1) {
-                document.getElementById('stats').appendChild(node);
+                document.getElementById('title').appendChild(hr);
+                document.getElementById('title').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
             }
