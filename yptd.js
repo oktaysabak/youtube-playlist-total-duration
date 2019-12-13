@@ -51,57 +51,36 @@ function addSpan() {
         } else {
             var a = document.getElementsByClassName('playlist-items yt-scrollbar-dark style-scope ytd-playlist-panel-renderer').items;
         }
-
+  
         var videos = getVideos(a);
         var toplam_sure = sureHesapla(videos);
-        var duration = 'Total Time: [ ' + timeConvert(toplam_sure) + ' ]';
+        var duration = timeConvert(toplam_sure);
         var node = document.createElement("span");
-        var textnode = document.createTextNode(duration);
-        node.style.fontSize = "1.3rem";
-
+        var textnode = document.createTextNode(" [ " + duration + " ] ");
+  
         node.appendChild(textnode);
-        node.className = "yt-simple-endpoint style-scope";
+        node.className = "yt-simple-endpoint style-scope yt-formatted-string";
         node.id = "total_playlist_time";
-
-        if (window.location.href.indexOf("playlist") > -1) {
-
-            var title = document.getElementById('title');
-            if (title.getAttribute('hidden') == "") {
-                title.removeAttribute('hidden');
-            }
-            document.getElementById('title').appendChild(node);
-        } else {
-            document.getElementById('save-button').appendChild(node);
-        }
-
-
+        
         if (!document.getElementById("total_playlist_time")) {
-            console.log('youtube playlist duration calculator loaded.')
             if (window.location.href.indexOf("playlist") > -1) {
-                var title = document.getElementById('title');
-                if (title.getAttribute('hidden') == "") {
-                    title.removeAttribute('hidden');
-                }
-
-                document.getElementById('title').appendChild(node);
+                document.getElementById('stats').appendChild(node);
             } else {
                 document.getElementById('save-button').appendChild(node);
             }
-            clearInterval(timer);
         } else {
-            document.getElementById("total_playlist_time").remove();
-            if (window.location.href.indexOf("playlist") > -1) {
-
-                var title = document.getElementById('title');
-                if (title.getAttribute('hidden') == "") {
-                    title.removeAttribute('hidden');
-                }
-                document.getElementById('title').appendChild(node);
-            } else {
-                document.getElementById('save-button').appendChild(node);
-            }
+            var mynode = document.getElementById("total_playlist_time");
+            mynode.innerText = " [ " + duration + " ] ";
         }
+        
+        
+        // if (window.location.href.indexOf("playlist") > -1) {
+        //     document.getElementById('stats').appendChild(node);
+        // } else {
+        //     document.getElementById('save-button').appendChild(node);
+        // }
+        
     }
-
-}
+  
+  }
 var timer = setInterval(addSpan, 4000);
