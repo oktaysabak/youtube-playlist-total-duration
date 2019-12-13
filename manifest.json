@@ -15,7 +15,7 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "*://*.youtube.com/*list*", "webNavigation", "tabs"
+    "*://*.youtube.com/*", "webNavigation", "tabs"
   ],
 
   "browser_action": {
