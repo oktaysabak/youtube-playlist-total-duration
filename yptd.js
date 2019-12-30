@@ -56,7 +56,7 @@ function addSpan() {
         var toplam_sure = sureHesapla(videos);
         var duration = timeConvert(toplam_sure);
         var node = document.createElement("span");
-        var textnode = document.createTextNode(duration);
+        var textnode = document.createTextNode('[ '+ duration + ' ]');
   
         node.appendChild(textnode);
         node.className = "yt-simple-endpoint style-scope yt-formatted-string";

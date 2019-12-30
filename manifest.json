@@ -10,7 +10,7 @@
   }],
   "background": {
     "matches": [
-      "*://*.youtube.com/*list*"
+      "*://*.youtube.com/*list*",  "*://*.youtube.com/playlist*"
     ],
     "scripts": ["background.js"]
   },
