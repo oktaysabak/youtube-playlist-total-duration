@@ -61,11 +61,11 @@ function addSpan() {
         node.appendChild(textnode);
         node.className = "yt-simple-endpoint style-scope yt-formatted-string";
         node.id = "total_playlist_time";
-        if (window.location.href.indexOf("playlist") > -1) {
-            document.getElementById('stats').appendChild(node);
-        } else {
-            document.getElementById('save-button').appendChild(node);
-        }
+        // if (window.location.href.indexOf("playlist") > -1) {
+        //     document.getElementById('stats').appendChild(node);
+        // } else {
+        //     document.getElementById('save-button').appendChild(node);
+        // }
   
   
         if (!document.getElementById("total_playlist_time")) {
