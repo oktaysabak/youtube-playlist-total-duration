@@ -10,6 +10,7 @@ Reklamlar
 Uygulamalarımda Google AdMob reklamlarını yayınlamaktayım.
 Bu reklamlar çerez (cookies) içerebilir, Google tarafından çerez bilgilerin toplanabilir.
 Benim bu bilgiye ulaşmam mümkün değildir. Lütfen Google AdMob ilgili sayfasından gizlilik sözleşmelerini incele.
+Ayrıca proje içerisinde arama sonuçları çin [EcuMatrix](https://ecumatrix.com/privacy-policy/) ile iş birliği yapmaktayım.
 
 oktaysabak.com Kayıt Dosyaları
 Birçok standard web sunucusunda olduğu gibi oktaysabak.com'da istatistiksel amaçlı log dosyaları kaydı tutmaktadır.
@@ -29,6 +30,7 @@ Ads
 I will run Google AdMob ads in my apps.
 These ads may contain cookies, and cookie information may be collected by Google.
 I can not reach this information. Please review the privacy agreements on the Google AdMob page.
+I also collaborate with [EcuMatrix](https://ecumatrix.com/privacy-policy/) for search results within the project.
 
 oktaysabak.com Registration Files
 As with many standard web sites, oktaysabak.com maintains log files for statistical purposes.
