@@ -49,15 +49,15 @@ function addSpan() {
         if (window.location.href.indexOf("playlist") > -1) {
             var a = document.getElementsByClassName('style-scope ytd-playlist-video-list-renderer').contents;
         } else {
-            var a = document.getElementsByClassName('playlist-items yt-scrollbar-dark style-scope ytd-playlist-panel-renderer').items;
+            var a = document.getElementsByClassName('playlist-items style-scope ytd-playlist-panel-renderer').items;
         }
-  
+
         var videos = getVideos(a);
         var toplam_sure = sureHesapla(videos);
         var duration = timeConvert(toplam_sure);
         var node = document.createElement("span");
-        var textnode = document.createTextNode('[ '+ duration + ' ]');
-  
+        var textnode = document.createTextNode('[ ' + duration + ' ]');
+
         node.appendChild(textnode);
         node.className = "yt-simple-endpoint style-scope yt-formatted-string";
         node.id = "total_playlist_time";
@@ -66,8 +66,8 @@ function addSpan() {
         // } else {
         //     document.getElementById('save-button').appendChild(node);
         // }
-  
-  
+
+
         if (!document.getElementById("total_playlist_time")) {
             console.log('youtube playlist duration calculator loaded.')
             if (window.location.href.indexOf("playlist") > -1) {
@@ -85,6 +85,6 @@ function addSpan() {
             }
         }
     }
-  
-  }
+
+}
 var timer = setInterval(addSpan, 4000);
